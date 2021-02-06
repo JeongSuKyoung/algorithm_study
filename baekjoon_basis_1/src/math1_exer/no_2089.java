@@ -1,0 +1,25 @@
+package math1_exer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class no_2089 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        int input = Integer.parseInt(br.readLine());
+        if(input == 0)
+            System.out.print(0);
+        else{
+            while(input != 1){
+                sb.append(Math.abs(input % -2));
+                input = (int) Math.ceil((double) input / (-2));
+            }
+
+            sb.append(input);
+            System.out.print(sb.reverse());
+        }
+    }
+}
